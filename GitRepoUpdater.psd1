@@ -5,7 +5,7 @@
     Author = 'Exiled Eye'
     CompanyName = 'None'
     Copyright = '(c) 2025 Exiled Eye. Licensed under MIT License.'
-    Description = 'A PowerShell module to easily pull updates from multiple Git repositories at once'
+    Description = 'A PowerShell module to easily pull updates from multiple Git repositories at once.'
     PowerShellVersion = '5.1'
     
     # Required modules
