@@ -1,9 +1,8 @@
 # GitRepoUpdater Module
-# Provides functions for managing multiple Git repositories
 
-# Import the main function
+# Main function import
 . $PSScriptRoot\Sync-EveryRepo.ps1
 
-# Export the function and alias
+# Function and Alias export
 Export-ModuleMember -Function Sync-EveryRepo
 Export-ModuleMember -Alias ser

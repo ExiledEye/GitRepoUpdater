@@ -41,6 +41,12 @@ function Sync-EveryRepo {
         $Recurse = $true
     }
     
+    # Check Git
+    if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+        Write-Error "Git is not installed or not in PATH. Please install Git and ensure it's available in your system PATH."
+        return
+    }
+
     $originalLocation = Get-Location
     
     try {
@@ -119,5 +125,5 @@ function Sync-EveryRepo {
     }
 }
 
-# Create alias for convenience
+# Alias
 New-Alias -Name ser -Value Sync-EveryRepo -Description "Alias for Sync-EveryRepo"

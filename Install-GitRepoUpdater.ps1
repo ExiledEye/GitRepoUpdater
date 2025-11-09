@@ -11,16 +11,15 @@
     .\Install-GitRepoUpdater.ps1
 #>
 
-# Determine script folder reliably
 $scriptRoot = if ($PSScriptRoot) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Definition }
 
-# Check if running as administrator
+# Admin check
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
 
-# Choose the correct Documents/ProgramFiles folder depending on edition (PowerShell Core vs Windows PowerShell)
+# Choose the correct dir depending on PowerShell edition
 $editionFolder = if ($PSVersionTable.PSEdition -eq 'Core') { 'PowerShell' } else { 'WindowsPowerShell' }
 
-# Determine the target module directory (works for both Desktop and Core)
+# Determine the target module directory
 if ($isAdmin) {
     # Install for all users
     $modulePath = Join-Path $env:ProgramFiles "$editionFolder\Modules\GitRepoUpdater"
@@ -50,19 +49,15 @@ if (Test-Path $modulePath) {
     Remove-Item $modulePath -Recurse -Force
 }
 
-# Create module directory
-if (Test-Path $modulePath) {
-    Write-Host "Removing existing module..." -ForegroundColor Yellow
-    Remove-Item $modulePath -Recurse -Force
-}
-
 New-Item -ItemType Directory -Path $modulePath -Force | Out-Null
 
 # Copy module files from the script folder so the installer works regardless of current working directory
 $files = @(
     'GitRepoUpdater.psd1',
     'GitRepoUpdater.psm1', 
-    'Sync-EveryRepo.ps1'
+    'Sync-EveryRepo.ps1',
+    'LICENSE',
+    'README.md'
 )
 
 $missing = $false
