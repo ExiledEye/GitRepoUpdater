@@ -90,6 +90,6 @@ If you encounter any problems or have suggestions, please [open an issue](https:
 
 ## License
 
-Copyright (c) 2025 Exiled Eye
+Copyright (c) 2025 Exiled Eye  
 This project is licensed under the MIT License.  
 See the [LICENSE](LICENSE) file for details.
