@@ -92,4 +92,4 @@ If you encounter any problems or have suggestions, please [open an issue](https:
 
 Copyright (c) 2025 Exiled Eye  
 This project is licensed under the MIT License.  
-See the [LICENSE](LICENSE) file for details.
+Refer to the [LICENSE](LICENSE) file for details.
