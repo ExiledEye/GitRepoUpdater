@@ -7,17 +7,6 @@ A PowerShell module to easily pull updates from multiple Git repositories at onc
 
 **Note**: if you need a simple script to copy paste and run once in a directory instead take a look at [this](./archive/pulleveryrepo.ps1)
 
-## Table of Contents
-
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Updating](#updating)
-- [Uninstalling](#uninstalling)
-- [Usage Example](#usage-example)
-- [Support](#support)
-- [License](#license)
-
 ## Features
 
 - Recursively finds all Git repositories in a directory
