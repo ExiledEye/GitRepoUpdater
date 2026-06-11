@@ -3,7 +3,7 @@
 
 A PowerShell module to easily pull updates from multiple Git repositories at once.
 
-<img title="Sync-EveryRepo execution result" alt="Sync-EveryRepo example" src="./Screenshots/Sync-EveryRepo example.png" width="75%">
+<img title="Sync-EveryRepo execution result" alt="Sync-EveryRepo example" src="./Screenshots/Sync-EveryRepo example.png" width="100%">
 
 **Note**: if you need a simple script to copy paste and run once in a directory instead take a look at [this](./archive/pulleveryrepo.ps1)
 
